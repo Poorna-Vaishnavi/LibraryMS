@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    
+    <!-- Google Font -->
+    
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="books.css" />
+  </head>
+  <body>
+    <input class="but"
+            type="button" value="Back to popular books" 
+            onclick="window.location.href = 'books.html'" />
+    <br>
+    <div class="heading3">
+    <h3>CAN'T FIND YOUR BOOK? SEARCH HERE </h3>
+  </div>
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Enter your book here ..."
+        />
+        <button type="submit"id="search">Search</button>
+      </div>
+      
+      <br>
+      <div class="dropdown-container">
+        <div class="dropdown">
+          <h3>FILTER BY GENRE</h3>
+          <select onchange="filterProduct(this.value)">
+            <option value="all">All</option>
+            <option value="novel">NOVEL</option>
+            <option value="adventure">ADVENTURE</option>
+            <option value="science">SCIENCE</option>
+          </select>
+        </div>
+      
+        <div class="dropdown">
+          <h3>FILTER BY YEAR OF PUBLISH</h3>
+          <select onchange="filterProduct(this.value)">
+            <option value="all">All</option>
+            <option value="1726">1726</option>
+            <option value="1894">1894</option>
+            <option value="1980">1980</option>
+            <option value="1988">1988</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="2001">2001</option>
+            <option value="2011">2011</option>
+            <option value="2018">2018</option>
+          </select>
+        </div>
+      
+        <div class="dropdown">
+          <h3>FILTER BY AUTHOR</h3>
+          <select onchange="filterProduct(this.value)">
+            <option value="all">All</option>
+            <option value="james">JAMES</option>
+            <option value="paulo">PAULO</option>
+            <option value="yann">YANN</option>
+            <option value="carl">CARL</option>
+            <option value="rowling">ROWLING</option>
+            <option value="daniel">DANIEL</option>
+            <option value="jonathan">JONATHAN</option>
+            <option value="george">GEORGE</option>
+            <option value="rudyard">RUDYARD</option>
+          </select>
+        </div>
+      </div>
+      
+      
+      <br>
+      <div id="products"></div>
+    </div>
+    <p id="count"></p>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
